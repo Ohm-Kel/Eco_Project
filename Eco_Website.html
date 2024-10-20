@@ -6,146 +6,10 @@
     <title>Ghana Environmental Impact Tracker</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        header {
-            background-color: #006B3F;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .ghana-flag {
-            background: linear-gradient(to bottom, #CE1126 33.33%, #FCD116 33.33% 66.66%, #006B3F 66.66%);
-            height: 10px;
-            margin-bottom: 10px;
-        }
-        section {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 5px;
-        }
-        .chart-container {
-            position: relative;
-            height: 200px;
-            width: 100%;
-        }
-        .image-container img {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        #darkModeToggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #006B3F;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .dark-mode {
-            background-color: #333;
-            color: #f4f4f4;
-        }
-        .dark-mode section {
-            background-color: #444;
-        }
-        #map {
-            height: 400px;
-            width: 100%;
-            margin-top: 20px;
-        }
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        /* Personal Impact styles */
-        #personal-impact {
-            flex-basis: 100%;
-            background-color: #e0f2f1;
-        }
-        .badge {
-            display: inline-block;
-            padding: 10px;
-            margin: 5px;
-            background-color: #FCD116;
-            border-radius: 50%;
-            color: #006B3F;
-            font-weight: bold;
-        }
 
-        /* Alert styles */
-        .alert-container {
-            background-color: #ffdddd;
-            color: #d8000c;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .alert-container h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        #alertMessage {
-            font-weight: bold;
-        }
-
-        /* Map regions */
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        #map-container {
-            flex-basis: 100%;
-            height: 400px;
-            background-color: #e0e0e0;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .map-region {
-            position: absolute;
-            background-color: rgba(0, 107, 63, 0.5);
-            cursor: pointer;
-        }
-
-        .map-region:hover {
-            background-color: rgba(0, 107, 63, 0.8);
-        }
-
-        #region-info {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -159,15 +23,15 @@
         <a href="#about">About</a>
         <a href="#environmentalUpdates">Environmental Insights</a>
         <a href="#galamsey">Galamsey</a>
-        <a href="#contact">Contact</a>
+        <a href="#site-footer">Contact</a>
     </nav>
 
     <!-- Header -->
     <header>
         <div class="ghana-flag"></div>
-        <h1>Ghana Environmental Impact Tracker</h1>
+        <h1>Ghana Environmental Awareness</h1>
     </header>
-
+    
     <!-- Real-time Alerts Section -->
     <section id="realTimeAlerts">
         <h2>Real-time Alerts</h2>
@@ -176,33 +40,116 @@
             <p id="alertMessage">Loading alerts...</p>
         </div>
     </section>
+    
+    <!-- Learn More About Our Environment Section -->
+    <section id="learnMore">
+        <h2>Learn More About Our Environment</h2>
+        <div class="learn-more-container">
+            <div class="learn-more-item">
+                <h3>Air Quality</h3>
+                <img src="image (15).png" alt="Air Quality" class="learn-more-image">
+                <p>Air quality is a major concern in urban areas. Poor air quality can lead to respiratory issues and other health problems. Learn about the current air quality in different regions and what you can do to help improve it.</p>
+                <a href="https://www.iqair.com/ghana/greater-accra/accra?srsltid=AfmBOop_aHPqGmjFB96i1zwj1IIfXTU6JFCieYxO_zDlFkWyFkIbVQUU" target="_blank">Read More</a>
+            </div>
+            <div class="learn-more-item">
+                <h3>Deforestation</h3>
+                <img src="image (17).png" alt="Deforestation" class="learn-more-image">
+                <p>Deforestation is a significant issue in Ghana, leading to loss of biodiversity and contributing to climate change. Discover the causes of deforestation and the efforts being made to combat it.</p>
+                <a href="https://www.globalforestwatch.org/dashboards/country/GHA/" target="_blank">Read More</a>
+            </div>
+            <div class="learn-more-item">
+                <h3>Conservation Efforts</h3>
+                <img src="image (19).png" alt="Conservation Efforts" class="learn-more-image">
+                <p>Conservation efforts are crucial for preserving our natural resources. Learn about the various projects and initiatives aimed at protecting Ghana's environment.</p>
+                <a href="https://afrodiscovery.com/country/ghana/ghana-wildlife-native-plants/conservation-efforts-in-ghana-protecting-endangered-species-and-habitats/#:~:text=Conservation%20efforts%20in%20Ghana%20focus%20on%20preserving%20habitats%20through%20reforestation,for%20endangered%20species%20and%20biodiversity." target="_blank">Read More</a>
+            </div>
+            <div class="learn-more-item">
+                <h3>Illegal Mining (Galamsey)</h3>
+                <img src="image (20).png" alt="Illegal Mining" class="learn-more-image">
+                <p>Illegal mining, known locally as Galamsey, has severe environmental impacts, including water pollution and deforestation. Find out more about the issue and the measures being taken to address it.</p>
+                <a href="https://servirglobal.net/services/monitoring-artisanal-mining-galamsey-ghana" target="_blank">Read More</a>
+            </div>
+        </div>
+    </section>
+    
 
-    <!-- Home Section -->
-    <section id="home">
+ <!-- Home Section -->
+<section id="home">
+    <div class="home-content">
         <h2>Welcome to Ghana Environmental Updates</h2>
-        <p>This platform provides the latest updates on air quality, deforestation, and conservation efforts in Ghana. Our goal is to raise awareness and engage the public in sustainable practices that help preserve the environment.</p>
-        <div class="image-container">
-            <img src="https://example.com/environmental-awareness.jpg" alt="Environmental Awareness Image">
-        </div>
+        <p>Stay informed with the latest updates on air quality, deforestation, and conservation efforts in Ghana. Join us in our mission to raise awareness and promote sustainable practices that protect the environment.</p>
+        <a href="#learn-more" class="cta-button">Learn More</a>
+    </div>
+    
+    <div class="image-container">
+        <img src="bio.png" alt="Environmental Awareness">
+    </div>
+</section>
+    <!-- Learn More Section -->
+    <section id="learn-more">
+        <h2>Learn More About Our Environment</h2>
+        <p>Discover the pressing environmental issues facing Ghana and how you can play a role in making a difference. Our mission is to provide resources and opportunities for everyone to engage in protecting our planet.</p>
+        
+        <h3>Environmental Issues</h3>
+        <ul>
+            <li><strong>Air Quality:</strong> Learn about the current air pollution levels and their impact on health.</li>
+            <li><strong>Deforestation:</strong> Understand the causes and effects of deforestation in Ghana.</li>
+            <li><strong>Conservation Efforts:</strong> Find out about the initiatives aimed at preserving our natural resources.</li>
+        </ul>
+        
+        <h3>Get Involved</h3>
+        <p>Join us in our efforts to protect the environment:</p>
+        <ul>
+            <li><a href="#volunteer">Volunteer Opportunities</a></li>
+            <li><a href="#events">Upcoming Events</a></li>
+            <li><a href="#donate">Support Us</a></li>
+        </ul>
+        
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter to receive the latest updates and tips for living sustainably.</p>
+        <form action="#" method="post">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    
+        <h3>Follow Us</h3>
+        <p>Stay connected with us on social media:</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+        </ul>
     </section>
 
-    <!-- Personal Impact Section -->
-    <section id="personal-impact">
-        <h2>Your Environmental Impact</h2>
-        <div id="impact-stats">
-            <p>Trees Planted: <span id="trees-planted">0</span></p>
-            <p>Waste Recycled (kg): <span id="waste-recycled">0</span></p>
-            <p>Water Saved (liters): <span id="water-saved">0</span></p>
+
+
+<!-- Personal Impact Section -->
+<section id="personal-impact">
+    <h2>Your Environmental Impact</h2>
+    <div id="impact-stats">
+        <div class="impact-stat">
+            <p>Trees Planted: <span id="trees-planted">152</span></p>
         </div>
-        <div id="badges">
-            <div class="badge" title="Planter">🌳</div>
-            <div class="badge" title="Recycler">♻️</div>
-            <div class="badge" title="Water Saver">💧</div>
+        <div class="impact-stat">
+            <p>Waste Recycled (kg): <span id="waste-recycled">840</span></p>
         </div>
-        <div class="chart-container">
-            <canvas id="impact-chart"></canvas>
+        <div class="impact-stat">
+            <p>Water Saved (liters): <span id="water-saved">12500</span></p>
         </div>
-    </section>
+    </div>
+    
+    <div id="badges" class="badges-container">
+        <div class="badge" title="Planter">🌳</div>
+        <div class="badge" title="Recycler">♻️</div>
+        <div class="badge" title="Water Saver">💧</div>
+    </div>
+    
+    <div class="chart-container">
+        <canvas id="impact-chart" width="400" height="200"></canvas>
+    </div>
+</section>
+
+
 
     <!-- Community Engagement Section -->
     <section id="community-engagement">
@@ -213,76 +160,85 @@
         <button id="create-event">Create New Event</button>
     </section>
 
-    <!-- Data Analysis and Visualization Section -->
-    <section id="data-analysis">
+<!-- Data Analysis and Visualization Section -->
+<section id="data-analysis">
+    <div class="data-analysis-content">
         <h2>Environmental Trend Analysis</h2>
-        <select id="trend-select">
-            <option value="air-quality">Air Quality</option>
-            <option value="deforestation">Deforestation</option>
-            <option value="water-quality">Water Quality</option>
-        </select>
+        <p>Explore real-time environmental trends in Ghana, including air quality, deforestation rates, and water quality. Use the dropdown below to visualize the latest data for each category.</p>
+        
+        <!-- Dropdown to select trend -->
+        <div class="dropdown-container">
+            <label for="trend-select">Choose a trend to explore:</label>
+            <select id="trend-select">
+                <option value="air-quality">Air Quality</option>
+                <option value="deforestation">Deforestation</option>
+                <option value="water-quality">Water Quality</option>
+            </select>
+        </div>
+        
+        <!-- Chart Container -->
         <div class="chart-container">
             <canvas id="trend-chart"></canvas>
         </div>
-    </section>
+        
+        <!-- Data Summary -->
+        <div id="data-summary">
+            <h3>Trend Overview:</h3>
+            <p id="summary-text">Select a trend to see detailed analysis and statistics.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Galamsey Section -->
-    <section id="galamsey">
-        <h2>Galamsey (Illegal Mining) in Ghana</h2>
-        <p><strong>Galamsey</strong>, a local term for illegal gold mining, has become one of the most significant environmental challenges in Ghana. It involves mining activities carried out without legal permits, often in forests, rivers, and agricultural lands. Galamsey is responsible for:</p>
+<!-- Galamsey Section -->
+<section id="galamsey">
+    <div class="galamsey-content">
+        <h2>Galamsey: The Environmental Impact of Illegal Mining</h2>
+        <p><strong>Galamsey</strong>, a local term for illegal gold mining, has become a critical environmental issue in Ghana. These unauthorized activities, conducted without legal permits, affect forests, rivers, and agricultural lands. The consequences are severe:</p>
         <ul>
-            <li>Destruction of vast forest areas and loss of biodiversity.</li>
-            <li>Severe water pollution in major rivers such as the Pra, Ankobra, and Offin Rivers due to mercury and cyanide use in mining processes.</li>
-            <li>Degradation of agricultural lands, making farming impossible in some areas.</li>
-            <li>Health hazards for local communities due to exposure to toxic substances.</li>
+            <li>Destruction of large areas of forest, causing significant loss of biodiversity.</li>
+            <li>Severe water pollution in rivers like Pra, Ankobra, and Offin, from toxic chemicals such as mercury and cyanide.</li>
+            <li>Degradation of agricultural land, making it unfit for farming and endangering food security.</li>
+            <li>Health risks for nearby communities, due to exposure to harmful toxins.</li>
         </ul>
-        <p>Efforts are being made by the government and environmental groups to curb Galamsey through enforcement of mining laws, community education, and sustainable alternatives for miners. However, the problem persists, making it a critical issue in Ghana's environmental agenda.</p>
-        <div class="chart-container">
-            <canvas id="galamseyImpactChart"></canvas>
-        </div>
-        <div class="image-container">
-            <img src="https://example.com/galamsey.jpg" alt="Galamsey (Illegal Mining) Image">
-        </div>
-    </section>
+        <p>Despite the government's efforts and the work of environmental organizations to combat Galamsey through law enforcement, education, and offering sustainable alternatives, the problem persists, demanding urgent attention.</p>
+    </div>
 
-    <!-- Deforestation Section -->
-    <section>
-        <h3>Deforestation in Ghana</h3>
-        <p>Hectares lost this year: <span id="hectaresLost">Loading...</span></p>
-        <div class="chart-container">
-            <canvas id="deforestationChart"></canvas>
-        </div>
-        <div class="image-container">
-            <img src="https://example.com/deforestation.jpg" alt="Deforestation Image">
-        </div>
-    </section>
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="mine.png" alt="Galamsey Image 1" class="galamsey-img active">
+            <img src="image (10).png" alt="Galamsey Image 2" class="galamsey-img">
+            <img src="image (11).png" alt="Galamsey Image 3" class="galamsey-img">
+            <img src="image (12).png" alt="Galamsey Image 1" class="galamsey-img active">
+            <img src="image (13).png" alt="Galamsey Image 2" class="galamsey-img">
+            <img src="image (14).png" alt="Galamsey Image 3" class="galamsey-img">
 
-    <!-- Project Showcase Section -->
-    <section id="project-showcase">
-        <h2>My Environmental Projects</h2>
-        <div id="projects-list">
-            <!-- Projects will be dynamically added here -->
         </div>
-        <button id="add-project">Add New Project</button>
-    </section>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+</section>
 
-    <!-- Interactive Map Section -->
-    <section>
-        <h2>Interactive Map</h2>
-        <div id="map"></div>
-        <div class="image-container">
-            <img src="https://example.com/ghana-map.jpg" alt="Ghana Map Image">
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, suggestions, or would like to contribute to our platform, feel free to reach out. You can email us at <strong>info@ghanaenvironmentalupdates.com</strong> or call us at <strong>+233 123 456 789</strong>.</p>
-        <div class="image-container">
-            <img src="https://example.com/contact-us.jpg" alt="Contact Us Image">
-        </div>
-    </section>
+<!-- About Us Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Ghana Environmental Updates, your go-to source for the latest information on environmental issues in Ghana. Our mission is to raise awareness and provide accurate, up-to-date information on air quality, deforestation, conservation efforts, and the impact of illegal mining activities.</p>
+    
+    <h3>Our Mission</h3>
+    <p>Our mission is to educate and inform the public about the environmental challenges facing Ghana and to promote sustainable practices that protect our natural resources for future generations.</p>
+    
+    <h3>Background</h3>
+    <p>Ghana Environmental Updates was founded in 2024 by a group of environmental enthusiasts who recognized the need for a centralized platform to track and report on environmental issues in Ghana. We cover a wide range of topics, including air quality monitoring, deforestation rates, conservation projects, and the impact of illegal mining activities.</p>
+    
+    <h3>Our Team</h3>
+    <p>Our team is composed of environmental scientists, data analysts, and passionate volunteers dedicated to making a positive impact on Ghana's environment. We work closely with local communities, government agencies, and non-profit organizations to gather and disseminate accurate information.</p>
+    
+    <h3>Contact Us</h3>
+    <p>If you have any questions, suggestions, or would like to get involved, please don't hesitate to contact us at <a href="mailto:info@ghanaenvironmentalupdates.org">info@ghanaenvironmentalupdates.org</a>.</p>
+    
+    <h3>Our Achievements</h3>
+    <p>Since our inception, we have successfully launched several initiatives, including tree planting campaigns, coastal clean-up projects, and educational workshops on sustainable practices. We are proud to have made a tangible impact on the environment and look forward to continuing our efforts.</p>
+</section>
 
     <script>
         // Dark mode toggle
@@ -470,6 +426,268 @@
         hideLoading();
         loadMap();
     </script>
+    <script>
+        // Initial setup for the chart
+        var ctx = document.getElementById('trend-chart').getContext('2d');
+        var trendChart = new Chart(ctx, {
+            type: 'bar', // default chart type
+            data: {
+                labels: [], // empty, will be filled dynamically
+                datasets: []
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    
+        // Function to update the chart based on selected trend
+        function updateChart(trend) {
+            var chartData;
+            var chartLabel;
+            var chartType = 'bar'; // default chart type is bar
+    
+            // Define datasets for each trend
+            if (trend === 'air-quality') {
+                chartData = {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                    datasets: [{
+                        label: 'Air Quality Index (AQI)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                        data: [85, 90, 95, 80, 75, 70, 65, 60, 85, 95] // Example data
+                    }]
+                };
+                chartLabel = 'Air Quality Trends in 2024';
+            } else if (trend === 'deforestation') {
+                chartData = {
+                    labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Forest Cover Loss (Hectares)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                        data: [1500, 1600, 1700, 1400, 1300, 1200, 1250, 1400, 1350, 1100] // Example data
+                    }]
+                };
+                chartType = 'line'; // Change chart type to line
+                chartLabel = 'Deforestation Trends in Ghana (2015-2024)';
+            } else if (trend === 'water-quality') {
+                chartData = {
+                    labels: ['Pra River', 'Ankobra River', 'Offin River', 'Volta River'],
+                    datasets: [{
+                        label: 'Water Quality (TDS in mg/L)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                        data: [350, 400, 450, 300] // Example data for water quality
+                    }]
+                };
+                chartLabel = 'Water Quality Analysis by Major Rivers';
+            }
+    
+            // Update the chart with new data
+            trendChart.data = chartData;
+            trendChart.config.type = chartType; // Change chart type if needed
+            trendChart.update();
+    
+            // Update the data summary text
+            document.getElementById('summary-text').innerText = chartLabel;
+        }
+    
+        // Listen for changes in the dropdown
+        document.getElementById('trend-select').addEventListener('change', function() {
+            var selectedTrend = this.value;
+            updateChart(selectedTrend); // Update chart based on selected value
+        });
+    
+        // Initial chart load
+        updateChart('air-quality'); // Default chart to air quality on page load
+
+        
+    </script>
+    <script>
+
+        // JavaScript to render the chart
+const ctx = document.getElementById('impact-chart').getContext('2d');
+
+const impactChart = new Chart(ctx, {
+    type: 'bar', // A bar chart
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'], // Example months
+        datasets: [
+            {
+                label: 'Trees Planted',
+                data: [20, 25, 30, 27, 35, 15], // Sample data for trees planted
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            },
+            {
+                label: 'Waste Recycled (kg)',
+                data: [120, 140, 160, 110, 170, 140], // Sample data for waste recycled
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            },
+            {
+                label: 'Water Saved (liters)',
+                data: [2500, 2000, 3000, 1500, 2800, 2700], // Sample data for water saved
+                backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('impact-chart').getContext('2d');
+
+        const impactChart = new Chart(ctx, {
+            type: 'bar', // A bar chart
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'], // Example months
+                datasets: [
+                    {
+                        label: 'Trees Planted',
+                        data: [20, 25, 30, 27, 35, 15], // Sample data for trees planted
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Waste Recycled (kg)',
+                        data: [120, 140, 160, 110, 170, 140], // Sample data for waste recycled
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Water Saved (liters)',
+                        data: [2500, 2000, 3000, 1500, 2800, 2700], // Sample data for water saved
+                        backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    let currentSlide = 0;
+    const slideInterval = 1000; // Time interval for automatic slide change (in milliseconds)
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.galamsey-img');
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+        const slides = document.querySelectorAll('.galamsey-img');
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Function to automatically change the slide
+    function autoChangeSlide() {
+        changeSlide(1); // Move to the next slide
+    }
+
+    // Set the interval for automatic sliding
+    const autoSlideInterval = setInterval(autoChangeSlide, slideInterval);
+
+    // Optional: Clear the interval on manual navigation
+    document.querySelectorAll('.prev, .next').forEach(button => {
+        button.addEventListener('click', () => {
+            clearInterval(autoSlideInterval); // Stop auto sliding when user navigates
+        });
+    });
+</script>
+
+
+    
+    <!-- Footer Section -->
+<footer id="site-footer" aria-labelledby="footer-title">
+    <div class="footer-container">
+        <!-- Footer Logo and Info -->
+        <div class="footer-info">
+            <h3 id="footer-title">Ghana Environmental Updates</h3>
+            <p>Stay informed with the latest environmental news and initiatives in Ghana. Protecting our planet, one update at a time.</p>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer Contact -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <address>
+                <p>Email: <a href="mailto:info@ghanaenvironmentalupdates.com">info@ghanaenvironmentalupdates.com</a></p>
+                <p>Phone: <a href="tel:+233123456789">+233 123 456 789</a></p>
+            </address>
+            
+        </div>
+            
+
+        <!-- Footer Social Media -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul class="social-icons">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Ghana Environmental Updates. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
 </body>
 
 </html>
